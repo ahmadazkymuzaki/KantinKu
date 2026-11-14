@@ -50,10 +50,3 @@ kantinku-tugas2/
 3. Buka `index.html` menggunakan browser. Ilustrasi menu tersimpan lokal di folder `assets`, sehingga tetap tampil tanpa mengandalkan URL gambar eksternal. Google Fonts membutuhkan internet; jika offline, browser menggunakan font cadangan.
 
 Tidak membutuhkan instalasi framework atau package tambahan.
-
-## Catatan
-Data produk dan proses checkout merupakan data simulasi untuk demonstrasi tugas. Proyek ini tidak terhubung ke backend atau sistem pembayaran sungguhan.
-\n\n## Batas implementasi halaman\nTugas 2 mengimplementasikan satu halaman yang dipilih dari wireframe Tugas 1, yaitu halaman Menu. Beranda, Pesanan Saya, dan Profil tetap ditampilkan sebagai konteks navigasi, tetapi belum menjadi halaman terpisah pada implementasi ini.\n
-
-## Foto produk
-Foto produk menggunakan foto makanan asli dari sumber gambar eksternal. Koneksi internet diperlukan agar foto dapat ditampilkan. Jika salah satu sumber sedang tidak tersedia, kartu akan menampilkan fallback yang rapi.
