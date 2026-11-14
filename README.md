@@ -49,4 +49,4 @@ kantinku-tugas2/
 2. Buka `index.html` menggunakan browser (Chrome, Edge, atau Firefox).
 3. Buka `index.html` menggunakan browser. Ilustrasi menu tersimpan lokal di folder `assets`, sehingga tetap tampil tanpa mengandalkan URL gambar eksternal. Google Fonts membutuhkan internet; jika offline, browser menggunakan font cadangan.
 
-Tidak membutuhkan instalasi framework atau package tambahan.
+Tidak membutuhkan instalasi framework atau package tambahan
