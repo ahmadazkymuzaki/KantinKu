@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KantinKu - aplikasi pemesanan makanan kantin.">
+  <title>Menu — KantinKu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#beranda" aria-label="KantinKu beranda"><span class="brand-mark">K</span><span>Kantin<span class="brand-accent">Ku</span></span></a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#menu" data-comingsoon="Beranda">Beranda</a><a class="active" href="#menu" aria-current="page">Menu</a><a href="#menu" data-comingsoon="Pesanan Saya">Pesanan Saya</a><a href="#menu" data-comingsoon="Profil">Profil</a>
+    </nav>
+    <button class="cart-top" id="openCart" type="button" aria-label="Buka keranjang">🛒 <span>Keranjang</span><b id="cartBadge">0</b></button>
+  </header>
+
+  <main class="page-shell" id="menu">
+    <section class="welcome-row">
+      <div><p class="eyebrow">KANTIN KAMPUS • PESAN ONLINE</p><h1>Temukan makanan<br><span>favoritmu hari ini.</span></h1><p class="intro">Pilih menu, pesan sekarang, lalu ambil saat waktunya tiba.</p></div>
+      <div class="welcome-art" aria-hidden="true"><span>🍱</span><small>Fresh & tasty<br>every day</small></div>
+    </section>
+
+    <section class="search-section" aria-label="Cari menu">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari nama makanan..." aria-label="Cari nama makanan"><kbd>⌘ K</kbd></label>
+      <button class="filter-button" id="clearFilters" type="button">↻ <span>Reset</span></button>
+    </section>
+
+    <section class="category-section">
+      <div class="section-heading"><div><p class="eyebrow">PILIH SESUKAMU</p><h2>Kategori menu</h2></div></div>
+      <div class="category-list" id="categoryList" role="group" aria-label="Filter kategori">
+        <button class="category-chip selected" data-category="Semua" type="button"><span>🍽️</span> Semua</button>
+        <button class="category-chip" data-category="Makanan" type="button"><span>🍛</span> Makanan</button>
+        <button class="category-chip" data-category="Minuman" type="button"><span>🥤</span> Minuman</button>
+        <button class="category-chip" data-category="Camilan" type="button"><span>🥐</span> Camilan</button>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="section-heading products-heading"><div><p class="eyebrow">DIBUAT DENGAN SEPENUH HATI</p><h2>Menu pilihan</h2></div><span class="result-count" id="resultCount">6 menu tersedia</span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p class="empty-state hidden" id="emptyState">Menu tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+    </section>
+
+    <footer class="footer"><a class="brand" href="#menu"><span class="brand-mark">K</span><span>Kantin<span class="brand-accent">Ku</span></span></a><p>Pesan mudah, makan lebih menyenangkan.</p><small>© 2026 KantinKu</small></footer>
+  </main>
+
+  <div class="overlay hidden" id="cartOverlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">PESANANMU</p><h2>Keranjang</h2></div><button class="icon-button" id="closeCart" type="button" aria-label="Tutup keranjang">✕</button></div>
+    <div class="cart-items" id="cartItems"><div class="cart-empty">🛍️<strong>Keranjang masih kosong</strong><span>Yuk, pilih makanan favoritmu.</span></div></div>
+    <div class="cart-summary"><div><span>Subtotal</span><strong id="subtotal">Rp0</strong></div><div><span>Biaya layanan</span><strong id="serviceFee">Rp0</strong></div><div class="total-row"><span>Total</span><strong id="grandTotal">Rp0</strong></div><button class="checkout-button" id="checkoutButton" type="button" disabled>Lanjut checkout <span>→</span></button><small>Checkout merupakan simulasi untuk demonstrasi tugas.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
