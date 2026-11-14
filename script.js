@@ -1,4 +1,3 @@
-// Data menu contoh untuk demonstrasi halaman Menu KantinKu.
 const products = [
   {id:1,name:'Nasi Ayam Teriyaki',category:'Makanan',price:18000,rating:'4.9',time:'15 mnt',description:'Ayam teriyaki gurih dengan nasi hangat dan sayuran.',image:'https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsb2ZmaWNlNl9waG90b19vZl9fY2hpY2tlbl90ZXJpeWFraV9ib3dsX3dpdGhfcmljZV90b3Bfdl84MTczOGNjZC0xOGJjLTRjYTUtYmM2Zi03ZjNkMjg0ZjM1NWRfMS5qcGc.jpg',tag:'Favorit'},
   {id:2,name:'Nasi Goreng Spesial',category:'Makanan',price:16000,rating:'4.8',time:'12 mnt',description:'Nasi goreng dengan telur, ayam, dan kerupuk.',image:'https://www.westonaprice.org/wp-content/uploads/fried-rice2.jpg',tag:'Best seller'},
@@ -25,7 +24,7 @@ let toastTimer;
 
 const rupiah = value => new Intl.NumberFormat('id-ID', {style:'currency',currency:'IDR',maximumFractionDigits:0}).format(value);
 
-// Menampilkan kartu produk sesuai kata kunci dan kategori yang dipilih.
+
 function renderProducts(){
   const keyword = searchInput.value.trim().toLowerCase();
   const filtered = products.filter(item =>
